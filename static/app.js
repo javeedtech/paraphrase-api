@@ -4,9 +4,9 @@ document.getElementById('inputText').addEventListener('input', function() {
     const charCount = document.getElementById('charCount');
     charCount.textContent = text.length;
     
-    if (text.length > 900) {
+    if (text.length > 1800) {
         charCount.classList.add('text-warning');
-    } else if (text.length === 1000) {
+    } else if (text.length === 2000) {
         charCount.classList.add('text-danger');
         charCount.classList.remove('text-warning');
     } else {

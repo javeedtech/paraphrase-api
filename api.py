@@ -58,10 +58,10 @@ def paraphrase():
                 'message': 'Text cannot be empty'
             }), 400
         
-        if len(text) > 1000:
+        if len(text) > 2000:
             return jsonify({
                 'error': 'Text too long',
-                'message': 'Text must be less than 1000 characters'
+                'message': 'Text must be less than 2000 characters'
             }), 400
         
         # Optional parameters
@@ -124,7 +124,7 @@ def paraphrase_info():
         'required_fields': ['text'],
         'optional_fields': ['max_length', 'temperature'],
         'limits': {
-            'max_text_length': 1000,
+            'max_text_length': 2000,
             'max_length_range': [10, 200],
             'temperature_range': [0.1, 2.0],
             'rate_limit': '60 requests per minute'
